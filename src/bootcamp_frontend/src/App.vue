@@ -1,17 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-import { bootcamp_backend } from 'declarations/bootcamp_backend/index';
-let greeting = ref('');
-
-async function handleSubmit(e) {
-  e.preventDefault();
-  const target = e.target;
-  const name = target.querySelector('#name').value;
-  await bootcamp_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
-}
-</script>
 
 <template>
   <main>
