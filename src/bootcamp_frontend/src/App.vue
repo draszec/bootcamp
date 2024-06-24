@@ -2,13 +2,24 @@
 <template>
   <main>
     <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <form action="#" @submit="handleSubmit">
-      <label for="name">Enter your name: &nbsp;</label>
-      <input id="name" alt="Name" type="text" />
-      <button type="submit">Click Me!</button>
-    </form>
-    <section id="greeting">{{ greeting }}</section>
+    Hello there!
+    <br/>
+    <button @click="increase">Podbij</button>
+      {{ counter }}
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    increase() {
+      this.counter++
+    }
+  }
+}
+</script>
